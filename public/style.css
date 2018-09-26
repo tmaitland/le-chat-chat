@@ -1,0 +1,555 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.bg-video {
+  filter: grayscale(50%);
+  position: fixed;
+  z-index: -100;
+  width: 100vw;
+  height: auto;
+  opacity: 0.5;
+}
+
+/*Loading Screen*/
+.loading-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-screen div {
+  height: 50px;
+  width: 15px;
+  background-color: red;
+  margin: 5px;
+  border-radius: 10px;
+  animation: bar 800ms ease infinite alternate-reverse;
+}
+
+.loading-screen div:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.loading-screen div:nth-child(3) {
+  animation-delay: 400ms;
+}
+
+.loading-screen div:nth-child(4) {
+  animation-delay: 600ms;
+}
+
+@keyframes bar {
+  from {
+    height: 50px;
+  }
+  to {
+    height: 150px;
+  }
+}
+/*Login Screen*/
+#contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: rgba(255, 127, 127, 0.401);
+}
+
+#login {
+  display: flex;
+  font-family: "Poiret One", cursive;
+  font-size: 25px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+  color: #000;
+}
+
+#signLog {
+  width: 100vw;
+}
+
+#logo {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  background-size: 100px 100px;
+}
+
+#tagline {
+  font-family: "Kaushan Script", cursive;
+  font-size: 50px;
+  height: 30px;
+  text-shadow: 2px 2px #ffffff;
+}
+
+.login-input {
+  margin: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #000000;
+  font-family: "Poiret One", cursive;
+  width: 300px;
+  height: 60px;
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 10px;
+  color: #fff;
+}
+
+.login-input:focus {
+  outline: none;
+  border: 3px solid black;
+  color: white;
+}
+
+.login-input:focus::placeholder {
+  color: transparent;
+}
+
+::placeholder {
+  color: white;
+}
+
+.signUp, .logIn {
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  align-self: flex-end;
+  font-family: "Poiret One", cursive;
+  font-size: 25px;
+  letter-spacing: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  border-color: black;
+}
+
+.signUp:hover {
+  background-color: red;
+  border-color: red;
+  color: #fff;
+  cursor: pointer;
+}
+
+.signUp:active {
+  background-color: rgba(0, 0, 0, 0.335);
+  border-color: rgba(0, 0, 0, 0.335);
+  color: #000;
+}
+
+.signUp:focus {
+  outline: none;
+}
+
+.logIn:hover {
+  background-color: red;
+  border-color: red;
+  color: #fff;
+  cursor: pointer;
+}
+
+.logIn:active {
+  background-color: rgba(0, 0, 0, 0.335);
+  border-color: rgba(0, 0, 0, 0.335);
+  color: #000;
+}
+
+.logIn:focus {
+  outline: none;
+}
+
+#google-login-btn {
+  height: 35px;
+  width: 190px;
+  border-width: 0;
+  background: #E02F2F;
+  color: #737373;
+  border-radius: 5px;
+  white-space: nowrap;
+  box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.05);
+  transition-property: background-color, box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+  padding: 0;
+  margin-bottom: 5px;
+}
+
+#google-login-btn:focus,
+#google-login-btn:hover {
+  box-shadow: 1px 4px 5px 1px rgba(0, 0, 0, 0.582);
+  cursor: pointer;
+}
+
+#fb {
+  height: 35px;
+  width: 190px;
+  border-width: 0;
+  background: #3B5998;
+  color: #737373;
+  border-radius: 5px;
+  white-space: nowrap;
+  box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.05);
+  transition-property: background-color, box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+  padding: 0;
+}
+
+#fb:focus,
+#fb:hover {
+  box-shadow: 1px 4px 5px 1px rgba(0, 0, 0, 0.582);
+  cursor: pointer;
+}
+
+#google-login-btn:active {
+  opacity: 0.7;
+  box-shadow: none;
+  transition-duration: 10ms;
+}
+
+#fb:active {
+  opacity: 0.7;
+  box-shadow: none;
+  transition-duration: 10ms;
+}
+
+.social-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50vh;
+}
+
+span {
+  width: 200px;
+  height: 35px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #fff;
+  padding-top: 2px;
+}
+
+.icon {
+  width: 25px;
+  height: 27px;
+}
+
+.bg-video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+
+.bg-video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+
+.upsign {
+  display: flex;
+  font-family: "Poiret One", cursive;
+  font-size: 25px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 45%;
+  color: #000;
+}
+
+#contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: rgba(255, 127, 127, 0.401);
+}
+
+#go-back-btn {
+  cursor: pointer;
+  position: absolute;
+  left: 10px;
+  top: 38px;
+}
+
+#go-back-btn img {
+  height: 40px;
+  width: 40px;
+}
+
+#logo {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  background-size: 100px 100px;
+}
+
+#tagline {
+  font-family: "Kaushan Script", cursive;
+  font-size: 40px;
+  height: 20px;
+  text-shadow: 2px 2px #ffffff;
+}
+
+.login-input {
+  margin: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #000000;
+  font-family: "Poiret One", cursive;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+  color: #fff;
+}
+
+.login-input:focus {
+  outline: none;
+  border: 3px solid black;
+  color: white;
+}
+
+.login-input:focus::placeholder {
+  color: transparent;
+}
+
+::placeholder {
+  color: white;
+}
+
+.signUp {
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  align-self: flex-end;
+  font-family: "Poiret One", cursive;
+  font-size: 25px;
+  letter-spacing: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  border-color: black;
+}
+
+.signUp:hover {
+  background-color: red;
+  border-color: red;
+  color: #fff;
+  cursor: pointer;
+}
+
+.signUp:active {
+  background-color: rgba(0, 0, 0, 0.335);
+  border-color: rgba(0, 0, 0, 0.335);
+  color: #000;
+}
+
+.signUp:focus {
+  outline: none;
+}
+
+#signLog {
+  width: 100vw;
+}
+
+/*Chat Screen*/
+.chat-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.chat-header {
+  font-family: "Poiret One", cursive;
+  font-size: 25px;
+  font-weight: bold;
+  height: 60px;
+  width: 100%;
+  background: -moz-linear-gradient(top, #b5bdc8 0%, #828c95 36%, #28343b 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #b5bdc8 0%, #828c95 36%, #28343b 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+}
+
+.chat-messages {
+  flex: 1;
+  background: url("images/damask-bg.jpg");
+  background-size: cover;
+  overflow-y: auto;
+}
+
+.chat-input-btn-container {
+  display: flex;
+}
+
+.chat-input-msg {
+  border: 1px solid black;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 60px;
+  flex-grow: 1;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  border-top: none;
+  border-bottom: 1px solid #DDD;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+}
+
+.chat-input-msg:focus {
+  outline-color: #000;
+}
+
+.chat-send-btn {
+  width: 60px;
+  height: 60px;
+  background-size: 60px 60px;
+  background: -moz-linear-gradient(top, #b5bdc8 0%, #828c95 36%, #28343b 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #b5bdc8 0%, #828c95 36%, #28343b 100%);
+  border-top: none;
+  border-bottom: 1px solid #DDD;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+}
+
+.sign-out-button {
+  width: 60px;
+  height: 60px;
+}
+
+.signout-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.send-msg {
+  font-family: "Poiret One", cursive;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.msg-bubble-right {
+  width: 165px;
+  margin: 6px;
+  height: 80px;
+  padding: 4px;
+  top: -14px;
+  background-color: crimson;
+  position: relative;
+  -moz-border-radius: 5px 0px 5px 5px;
+  -webkit-border-radius: 5px 0px 5px 5px;
+  border-radius: 5px 0px 5px 5px;
+}
+
+.msg-bubble-left {
+  width: 165px;
+  margin: 6px;
+  height: 80px;
+  padding: 4px;
+  left: 0;
+  top: -14px;
+  background-color: mediumpurple;
+  position: relative;
+  -moz-border-radius: 0px 5px 5px 5px;
+  -webkit-border-radius: 0px 5px 5px 5px;
+  border-radius: 0px 5px 5px 5px;
+}
+
+.msg-bubble-right:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: -7px;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid crimson;
+  border-bottom: 13px solid transparent;
+  left: 95%;
+  transform: rotate(155deg);
+}
+
+.msg-bubble-left:before {
+  content: "";
+  position: absolute;
+  left: -19px;
+  top: -7px;
+  width: 0;
+  height: 0;
+  transform: rotate(25deg);
+  z-index: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid mediumpurple;
+  border-bottom: 13px solid transparent;
+}
+
+.msg-bubble-left .txt-msg {
+  text-align: left;
+  margin: 7px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.msg-bubble-right .txt-msg {
+  text-align: left;
+  margin: 7px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.msg-bubble-left .msg-date-time {
+  font-size: 8px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 5px;
+  color: white;
+}
+
+.msg-name {
+  margin: 0px 10px;
+  color: #fff;
+}
+
+.msg-bubble-right .msg-date-time {
+  font-size: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 5px;
+  color: white;
+}
+
+.user-icon {
+  top: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

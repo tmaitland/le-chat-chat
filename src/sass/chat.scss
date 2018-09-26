@@ -1,0 +1,83 @@
+/*Chat Screen*/
+.chat-screen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+.chat-header{
+    font-family: 'Poiret One', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    height: 60px;
+    width: 100%;
+    background: -moz-linear-gradient(top, rgba(181,189,200,1) 0%, rgba(130,140,149,1) 36%, rgba(40,52,59,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(181,189,200,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+ 
+}
+
+.chat-messages{
+    flex: 1;
+    background: url('images/damask-bg.jpg');
+    background-size: cover; 
+    overflow-y: auto;
+}
+
+
+.chat-input-btn-container{
+    display: flex;
+}
+
+  .chat-input-msg {
+    border: 1px solid black;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+    height: 60px;
+    flex-grow: 1;
+    padding: 0 10px;
+    border: 1px solid transparent;
+
+  border-top: none;
+  border-bottom: 1px solid #DDD;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+  }
+
+  .chat-input-msg:focus{
+    outline-color: #000;
+  }
+
+  .chat-send-btn {
+      width: 60px;
+      height: 60px;
+      background-size: 60px 60px;
+      background: -moz-linear-gradient(top, rgba(181,189,200,1) 0%, rgba(130,140,149,1) 36%, rgba(40,52,59,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(181,189,200,1) 0%,rgba(130,140,149,1) 36%,rgba(40,52,59,1) 100%);
+      border-top: none;
+  border-bottom: 1px solid #DDD;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+  }
+
+  .sign-out-button {
+    width: 60px;
+    height: 60px;
+  }
+   
+  .signout-icon {
+    width: 50px;
+    height: 50px;
+
+  }
+
+  .send-msg {
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    
+  }

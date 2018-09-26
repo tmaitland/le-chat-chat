@@ -1,0 +1,98 @@
+.msg-bubble-right{
+    width: 165px;
+    margin: 6px;
+    height: 80px;
+    padding: 4px;
+    top: -14px;
+    background-color: crimson;
+    position: relative;
+    -moz-border-radius:    5px 0px 5px 5px;
+    -webkit-border-radius: 5px 0px 5px 5px;
+    border-radius:         5px 0px 5px 5px;
+}
+
+.msg-bubble-left{
+    width: 165px;
+    margin: 6px;
+    height: 80px;
+    padding: 4px;
+    left: 0;
+    top: -14px;
+    background-color: mediumpurple;
+    position: relative;
+    -moz-border-radius: 0px 5px 5px 5px;
+    -webkit-border-radius: 0px 5px 5px 5px;
+    border-radius: 0px 5px 5px 5px;
+    
+}
+
+.msg-bubble-right:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: -7px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 26px solid crimson;
+    border-bottom: 13px solid transparent;
+    left: 95%;
+    transform: rotate(155deg);
+ }
+
+.msg-bubble-left:before {
+    content:"";
+    position: absolute;
+    left: -19px;
+    top: -7px;
+    width: 0;
+    height: 0;
+    transform: rotate(25deg);
+    z-index: 0;
+    border-top: 13px solid transparent;
+    border-right: 26px solid mediumpurple;
+    border-bottom: 13px solid transparent;
+ }
+ 
+ .msg-bubble-left .txt-msg {
+     text-align: left;
+     margin: 7px;
+     color: white;
+     font-family: "Roboto", sans-serif;
+ }
+
+ .msg-bubble-right .txt-msg {
+     text-align: left;
+     margin: 7px;
+     color: white;
+     font-family: "Roboto", sans-serif;
+ }
+
+ .msg-bubble-left .msg-date-time {
+    font-size: 8px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 5px;
+    color: white;
+  }
+
+  .msg-name {
+    margin: 0px 10px;
+    color: #fff;
+  }
+  
+  .msg-bubble-right .msg-date-time {
+    font-size: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 5px;
+    color: white;
+  }
+
+  .user-icon {
+      top: 20px;
+  }
+
+
