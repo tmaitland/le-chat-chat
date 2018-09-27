@@ -1,9 +1,10 @@
 .msg-bubble-right{
-    width: 165px;
+    width: 40%;
     margin: 6px;
-    height: 80px;
-    padding: 4px;
+    height: 20%;
+    padding: 10px;
     top: -14px;
+    overflow-wrap: break-word;
     background-color: crimson;
     position: relative;
     -moz-border-radius:    5px 0px 5px 5px;
@@ -12,12 +13,13 @@
 }
 
 .msg-bubble-left{
-    width: 165px;
+    width: 40%;
     margin: 6px;
-    height: 80px;
-    padding: 4px;
+    height: 20%;
+    padding: 10px;
     left: 0;
     top: -14px;
+    overflow-wrap: break-word;
     background-color: mediumpurple;
     position: relative;
     -moz-border-radius: 0px 5px 5px 5px;
@@ -56,6 +58,7 @@
  
  .msg-bubble-left .txt-msg {
      text-align: left;
+    word-wrap: break-word;
      margin: 7px;
      color: white;
      font-family: "Roboto", sans-serif;
@@ -63,9 +66,11 @@
 
  .msg-bubble-right .txt-msg {
      text-align: left;
+     word-wrap: break-word;
      margin: 7px;
      color: white;
      font-family: "Roboto", sans-serif;
+     padding: 5px;
  }
 
  .msg-bubble-left .msg-date-time {
@@ -75,6 +80,7 @@
     right: 0;
     margin-right: 5px;
     color: white;
+    padding: 5px;
   }
 
   .msg-name {
